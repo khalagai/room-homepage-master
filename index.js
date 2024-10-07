@@ -2,16 +2,13 @@
   const closeMenu = document.getElementById("menuClose");
   const showNav = document.getElementById("myNav");
 
+
   const openNav = () => {
-    openMenu.addEventListener("click", () => {
       showNav.style.width = "100%";
-    })
   }
 
   const closeNav = () => {
-    closeMenu.addEventListener("click", () => {
       showNav.style.width = 0;
-    })
   }
 
   let slideIndex = 1;
