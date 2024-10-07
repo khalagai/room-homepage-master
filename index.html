@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Frontend Mentor | Room homepage</title>
+</head>
+
+<body>
+
+  <div class="card">
+    <section class="header">      
+      <nav aria-label="Main Navigation">        
+        <div class="logo">
+          <button aria-label="Business logo">
+            <img class="icon-logo" src="./images/logo.svg" alt="Business logo">
+          </button>
+        </div>
+        <div class="open-menu">
+          <button id="menuOpen" aria-expanded="false" aria-controls="myNav">
+            <img class="menu-icon" src="./images/icon-hamburger.svg" alt="Open menu">
+          </button>
+        </div>
+
+        <div id="myNav" class="dropdown-menu">
+          <div class="close-menu">
+            <button id="menuClose">
+              <img class="menu-icon" src="./images/icon-close.svg" alt="Close menu">
+            </button>
+          </div>
+          <div class="menu-list">
+            <ul>
+              <li><a class="nav-link" href="#">Home</a></li>
+              <li><a class="nav-link" href="https://room.com/shop/">Shop</a></li>
+              <li><a class="nav-link" href="https://room.com/about/">About</a></li>
+              <li><a class="nav-link" href="https://room.com/press/">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="slideshow-container">
+      <div class="mySlides foto-fade">
+        <img class="mb-image" src="./images/mobile-image-hero-1.jpg" alt="Modern living room design with a brown sofa and wooden coffee table">
+        <img class="dk-image" src="./images/desktop-image-hero-1.jpg" alt="Desktop view of modern living room with brown sofa and wooden coffee table">
+      </div>
+      <div class="mySlides foto-fade">
+        <img class="mb-image" src="./images/mobile-image-hero-2.jpg" alt="Dining room with stylish wooden furniture and a chandelier">
+        <img class="dk-image" src="./images/desktop-image-hero-2.jpg" alt="Desktop view of dining room with stylish wooden furniture and chandelier">
+      </div>
+      <div class="mySlides foto-fade">
+        <img class="mb-image" src="./images/mobile-image-hero-3.jpg" alt="Contemporary office space with modern furniture">
+        <img class="dk-image" src="./images/desktop-image-hero-3.jpg" alt="Desktop view of contemporary office space with modern furniture">
+      </div>
+    </section>
+
+    <section class="mover">    
+      <button onclick="plusSlides(-1)" id="prev" aria-label="Previous slide" tabindex="0">
+        <img src="./images/icon-angle-left.svg" alt="Previous slide">
+      </button>
+      <button onclick="plusSlides(1)" id="next" aria-label="Next slide" tabindex="0">
+        <img src="./images/icon-angle-right.svg" alt="Next slide">
+      </button> 
+    </section>
+
+    <section class="info-container">
+      <div class="slide-text fade">
+        <h1>Discover innovative<br> ways to decorate</h1>
+        <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+          Our experts combine form and function in bringing your vision to life. Create a room in your 
+          own style with our collection and make your property a reflection of you and what you love.
+        </p>
+      </div>
+           
+      <div class="slide-text fade">
+        <h1>We are available all<br> across the globe</h1>         
+        <p>
+          With stores all over the world, it's easy for you to find furniture for your home or place of business. 
+          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
+          store locator. Any questions? Don't hesitate to contact us today.
+        </p>
+      </div>
+    
+      <div class="slide-text fade">
+        <h1>Manufactured with<br> the best materials</h1>
+        <p>
+          Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
+          to ensure that every product is made as perfect and as consistent as possible. With three decades of 
+          experience in this industry, we understand what customers want for their home and office.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="shop-action">
+      <div class="shop-now">
+        <button id="shopNow" class="shop" aria-label="Shop now">
+          Shop now <img src="./images/icon-arrow.svg" alt="Arrow pointing to shop">
+        </button> 
+      </div>
+    </section>
+    
+    <section class="layout-image-1">
+        <img class="layout-image" src="./images/image-about-dark.jpg" alt="Dark themed furniture in a well-lit room">
+    </section>
+
+    <section class="layout-info">
+      <h2>About our furniture</h2>
+      <p class="notes">
+        Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best expresses your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.
+      </p>
+    </section>
+
+    <section class="layout-image-2">
+      <img class="layout-image" src="./images/image-about-light.jpg" alt="Light themed furniture in a bright room">
+    </section> 
+  
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Khalagai</a>.
+  </div>
+  <script src="./index.js" charset="UTF-8"></script>
+</body>
+</html>

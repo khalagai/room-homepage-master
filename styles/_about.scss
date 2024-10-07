@@ -1,0 +1,38 @@
+
+.layout-image, .layout-image-1, .layout-image-2 {
+    height: 100%;
+    width: 100%;
+}
+
+.layout-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+
+    .layout-image-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 7;
+        grid-row-end: 10;
+    }
+
+    .layout-info {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 7;
+        grid-row-end: 10;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .layout-image-2 {
+        grid-row-start: 7;
+        grid-row-end: 10;
+        grid-column-start: 6;
+        grid-column-end: 8;
+    }
+  }

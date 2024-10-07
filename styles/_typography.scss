@@ -1,0 +1,74 @@
+
+
+$DarkGray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$VeryDarkGray: hsl(0, 0%, 27%);
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+h1 {
+    font-size: clamp(22px, 9vw, 35px);
+    color: $VeryDarkGray;
+    display: flex;
+    align-items: flex-end;
+}
+
+h2 {
+    font-size: clamp(12px, 4.2vw, 14px);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+p {
+    color: $DarkGray;
+    font-weight: 500;
+    font-size: clamp(14px, 5vw, 15px); 
+    display: flex;
+    align-items: flex-end;
+    min-height: 8rem;
+    padding-top: 1rem;
+}
+
+@media (min-width: 375px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 14px;
+        min-height: 4rem;
+    }
+}
+
+@media (min-width: 550px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    
+    }
+}
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: clamp(14px, 1.6vw, 16px);
+    
+    }
+}

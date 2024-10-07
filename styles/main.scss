@@ -1,0 +1,57 @@
+@use "header";
+@use "slide-container";
+@use "mover";
+@use "info-container";
+@use "about";
+@use "typography";
+@use "shop";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: League Spartan;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: typography.$VeryDarkGray;   
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    min-width: 275px;
+    width: 100%;
+    height: 100%;
+    background: typography.$White;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+
+    a { color: hsl(228, 45%, 44%); }
+}
+
+@media (min-width: 600px) {
+    .card {
+        max-width: 36rem;
+    }
+  }
+
+@media (min-width: 768px) {
+
+        .card {
+            max-width: none;
+            gap: 0; 
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+        }
+
+        body {
+            height: 100vh;
+        }
+}

@@ -1,0 +1,198 @@
+@use "typography";
+
+.header {
+    grid-column: 1;
+    grid-row: 1;
+    height: 15vh;
+    z-index: 1;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.menu-icon {
+    height: 1rem;
+    width: 1rem;
+}
+.open-menu {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+    transform: 1s;
+}
+
+.close-menu {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding-left: 1rem;
+    transition: 1.5s;
+}
+
+.logo {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu {   
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    width: 0;
+    gap: 0;
+    overflow-x: hidden;
+    transition: 1s;
+    background-color: typography.$White;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    .menu-list {        
+      
+        padding-right: 1rem;
+    
+        ul {
+        display: flex;
+        gap: 1.3rem;
+        list-style: none;
+        width: 100%;
+        font-weight: 700;        
+        text-transform: lowercase;
+        height: 100%;
+
+        li {
+            font-size: clamp(10px, 2.3vh, 16px);
+            letter-spacing: 1px;
+            display: inline-block;     
+
+            .nav-link {
+                color: typography.$VeryDarkGray;
+                text-decoration: none;
+                position: relative;
+              
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    height: 4px;
+                    width: 0;
+                    margin: 0 auto;
+                    border-radius: 45px;                
+                    background: transparent;
+                    transition: all 0.3s;
+                    pointer-events: none;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    background: typography.$VeryDarkGray;
+                }
+
+                &:focus::after {
+                    width: 100%;
+                    background: typography.$VeryDarkGray;
+                }
+            }
+
+        }
+    
+    }
+}
+}
+
+@media (min-width: 375px) {
+    .dropdown-menu .menu-list ul li a {
+        font-size: 16px;
+    }
+
+    .menu-icon {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .icon-logo {
+        height: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .header {       
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    .icon-logo {
+        height: 1rem;
+    }
+
+}
+
+@media (min-width: 960px) {
+
+    .open-menu, .close-menu {
+        display: none;        
+    }
+
+    .logo {
+       justify-content: flex-start;
+       padding-left: 3rem;
+    }
+
+    .dropdown-menu {
+        background-color: transparent;
+        box-shadow: none;
+        transition: 0;
+        grid-column: 1;
+        width: 100%;
+        justify-content: center;       
+
+        .menu-list {
+            padding-left: 0;
+
+            ul {
+                gap: 1.8rem;
+                align-items: flex-start;
+                padding-left: 0;
+               
+                li {
+                    font-size: 14px;                    
+
+                    .nav-link {
+                        color: typography.$White;
+
+                        &:hover::after {
+                            background: typography.$White;
+                        }
+                    }
+
+                }
+            }
+        }
+    
+    }
+
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    .dropdown-menu .menu-list ul {
+        gap: 1rem;
+         li {font-size: 10px}}
+  }
